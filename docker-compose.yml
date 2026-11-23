@@ -1,0 +1,23 @@
+services:
+  mssql:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: srbd-mssql
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: "SrbdLab2026!"
+      MSSQL_PID: Developer
+      MSSQL_AGENT_ENABLED: "true"
+    ports:
+      - "1433:1433"
+    volumes:
+      - mssql-data:/var/opt/mssql
+      - ./lab1:/scripts/lab1:ro
+      - ./pz1:/scripts/pz1:ro
+      - ./pz2:/scripts/pz2:ro
+      - ./lab2:/scripts/lab2:ro
+      - ./pz3:/scripts/pz3:ro
+      - ./lab3:/scripts/lab3:ro
+      - ./pz4:/scripts/pz4:ro
+
+volumes:
+  mssql-data:
