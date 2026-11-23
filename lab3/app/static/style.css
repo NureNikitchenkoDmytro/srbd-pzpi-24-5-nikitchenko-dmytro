@@ -1,0 +1,15 @@
+body { font-family: sans-serif; margin: 20px; color: #222; }
+h1 { margin-top: 0; }
+.columns { display: flex; gap: 30px; align-items: flex-start; }
+.columns > section { flex: 1; }
+table { border-collapse: collapse; margin: 8px 0; }
+th, td { border: 1px solid #bbb; padding: 4px 8px; text-align: left; }
+th { background: #eee; }
+#medicines tr:not(:first-child) { cursor: pointer; }
+#medicines tr:not(:first-child):hover { background: #eef5ff; }
+.row { margin: 10px 0; display: flex; gap: 8px; align-items: center; }
+.scroll { max-height: 260px; overflow-y: auto; display: inline-block; }
+.hint { color: #888; }
+.ok { color: #1a7f37; }
+.error { color: #c00; font-weight: bold; }
+.result { font-weight: bold; }

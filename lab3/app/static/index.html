@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Аптечна мережа</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <h1>Аптечна мережа</h1>
+
+  <div class="columns">
+    <section>
+      <h2>Препарати</h2>
+      <table id="medicines"></table>
+    </section>
+
+    <section id="detail">
+      <p class="hint">Оберіть препарат у списку</p>
+    </section>
+  </div>
+
+  <section>
+    <h2>Функції</h2>
+    <div class="row">
+      <label>Аптека <select id="assortment-pharmacy"></select></label>
+      <button id="assortment-btn">Асортимент</button>
+    </div>
+    <table id="assortment"></table>
+
+    <div class="row">
+      <label>Позицій дешевше за
+        <input id="price" type="number" value="50"> грн</label>
+      <button id="price-btn">Порахувати</button>
+      <span id="price-result" class="result"></span>
+    </div>
+    <div class="row">
+      <label>Працівників з регіону
+        <input id="region" value="Харківська"></label>
+      <button id="region-btn">Порахувати</button>
+      <span id="region-result" class="result"></span>
+    </div>
+  </section>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
